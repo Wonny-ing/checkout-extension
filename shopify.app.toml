@@ -1,0 +1,29 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "feff010f039030008ab2d4edd9a05ff0"
+name = "address-autocomplete"
+handle = "address-autocomplete-11"
+application_url = "https://shopify.dev/apps/default-app-home"
+embedded = true
+
+[build]
+dev_store_url = "test-address-autocomplete.myshopify.com"
+include_config_on_deploy = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "read_customers,read_products,read_shipping,write_cart_transforms,write_delivery_customizations,write_discounts,write_discounts_allocator_functions,write_products"
+
+[auth]
+redirect_urls = [
+  "https://shopify.dev/apps/default-app-home/api/auth",
+  "https://shopify.dev/apps/default-app-home/auth/callback",
+  "https://shopify.dev/apps/default-app-home/auth/shopify/callback",
+  "https://shopify.dev/apps/default-app-home/api/auth/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-07"
+
+[pos]
+embedded = false
